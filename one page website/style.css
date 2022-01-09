@@ -8,15 +8,21 @@
 }
 .container1, .container2, .container3,.container4, .container5{
     display: flex;
+    height: 100vh;
+    width: 100vw;  
     align-items: center;
     justify-content: center;
     background: #d9d9d9;
-    height: 100vh;
-    width: 100vw;   
     padding-top: 4em; 
 }
 .container2{
-    height: 75vh;
+    height: 90vh;
+    padding-bottom: 8em;
+}
+.container6{
+    background: #d9d9d9;
+    height: 100vh;
+    width: 100vw; 
 }
 .first-nav-bar{
     position: sticky;
@@ -71,6 +77,11 @@
     font-size: 40px;
     
 }
+.container6-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color:#111;
+}
 .container5-heading{
     margin-top: 3em;
 }
@@ -113,12 +124,19 @@ a.pic-source-link{
 a.pic-source::after:hover{
     background: #f5c639;
 }
-.content2,.content4{
+.content2,.content4, .content6{
     padding: 2em 0 2em 0;
     width: 75%;
     display: flex;
     flex-direction: row;
     gap:2em;
+}
+.content6{
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0 2em 0;
+    width: 100%;
+    display: flex;
 }
 p{
     font-family: 'Open Sans', sans-serif;
@@ -175,11 +193,19 @@ p{
     /* background: red; */
     gap: 2em;
 }
-.dog-img{
+.dog-img1, .dog-img2{
     width: 7em;
     height: 7em;
     background: tan;
     border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.dog-img1{
+    background-image: url("./images/circle-dog-1.jpg");
+}
+.dog-img2{
+    background-image: url("./images/circle-dog-2.jpg");
 }
 .dog-txt{
     height: 7em;
@@ -187,10 +213,94 @@ p{
     /* background: orange; */
 }
 .img-row{
+    width: 100%;
+    height: 18en;
     display: flex;
     flex-direction: row;
-    gap: 0.2em;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    
 }
-.doggie{
-    wi
+.doggie1, .doggie2, .doggie3, .doggie4, .doggie5{
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    background-position: center;
+}
+.doggie1{
+    background-image: url("images/dog-image-row1.jpg");
+}
+.doggie2{
+    background-image: url("images/dog-image-row2\ \(2\).jpg");
+}
+.doggie3{
+    background-image: url("images/dog-image-row3.jpg");
+}
+.doggie4{
+    background-image: url("images/dog-image-row4.jpg");
+}
+.doggie5{
+    background-image: url("images/dog-image-row5.jpg");
+}
+.doggie:hover{
+    /* opacity: 0.1; */
+    background: rgba(0,0,0,0.4);
+}
+.mod{
+    padding: 2em 0 2em 0;
+}
+.footer1,.footer2{
+    width: 100vw;
+}
+.footer1{
+    display: flex;
+    height: 38vh;
+    background: #f5c639;
+    justify-content: center;
+    align-items: center;
+}
+.footer2{
+    height: 48vh;
+    background: #3d3d3d;
+}
+.form{
+    width: 60em;
+    height: 24em;
+    background: white;
+    z-index: 2;
+    margin-bottom: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 8em; */
+    gap: 2em;
+}
+.form-left,.form-right{
+    margin-top: 4em;
+    width: 50%;
+    height: 87%;
+}
+.form-left{
+    gap: 1.5em;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 2em; */
+    margin-right: 2em;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-right{
+    background: red;
+}
+.phone-and-email{
+    display: flex;
+    gap: 2em;
+}
+label{
+
+    font-family: 'Montserrat', sans-serif;
 }
