@@ -7,6 +7,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow-x: hidden;
+}
 .container1, .container2, .container3,.container4, .container5{
     display: flex;
     height: 100vh;
@@ -21,7 +24,6 @@
     padding-bottom: 8em;
 }
 .container6{
-    background: #d9d9d9;
     height: 100vh;
     width: 100vw; 
 }
@@ -31,7 +33,6 @@
     display: flex;
     gap: 30em;
     align-items: center;
-    /* justify-content: space-between; */
     width: 100vw;
     height: 5em;
     z-index: 3;
@@ -67,15 +68,12 @@
     background-image: url("./images/logo-w.png");
     background-size: cover;
     background-position: center;
-    /* background: red; */
-    /* margin-right: 20em; */
 }
 .second-logo{
     margin-top: -0.4em;
     width: 9em;
     height: 4.4em;
     background-image: url("./images/3d1cb46b-c73f-44c9-a49f-f830531c72dd.png");
-    /* background: red; */
     background-size: cover;
     background-position: center;
 }
@@ -86,7 +84,6 @@
     justify-content: center;
     width: 75%;
     height: 90%;
-    /* margin-top: 12em; */
 }
 
 .right3,.left3{
@@ -94,9 +91,9 @@
     width: 50%;
     height: 90%;
     background: white;
+    position: relative
 }
 .right3{
-    /* margin-left: 2em; */
     padding-left: 3em;
 }
 .left1, .right1{
@@ -107,7 +104,6 @@
 }
 .right1{
     align-items: left;
-    /* margin-left: 1em; */
 }
 .left1{
     display: flex;
@@ -156,10 +152,8 @@
     box-shadow: -3px 2px 8px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -3px 2px 8px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -3px 2px 8px 0px rgba(0,0,0,0.75);
-    /* padding: 02em; */
 }
 .pic-source, .pic-source-link{
-    /* font-family: 'Open Sans', sans-serif; */
     font-weight: 400;
     font-style: italic;
     line-height: 2em;
@@ -256,14 +250,11 @@ p,.form-text{
     margin-top: 1em;
     width: 100%;
     height: 40%;
-    /* gap: -2em; */
 }
 .container6-heading{
     font-family: 'Montserrat', sans-serif;
-    /* margin-left:15em; */
     font-size: 60px;
     color:#111;
-    /* display: flex; */
     flex-direction: row;
 }
 .underline{
@@ -276,7 +267,6 @@ p,.form-text{
 .dog{
     display:flex;
     flex-direction: row;
-    /* background: red;  */
     gap: 1em;
 }
 .dog-img1, .dog-img2{
@@ -296,7 +286,6 @@ p,.form-text{
 .dog-txt{
     height: 7em;
     width: 20em;
-    /* background: orange; */
 }
 .img-row{
     width: 100%;
@@ -359,7 +348,6 @@ p,.form-text{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 8em; */
     gap: 2em;
 }
 .form-text,label{
@@ -376,7 +364,6 @@ p,.form-text{
     gap: 1.5em;
     display: flex;
     flex-direction: column;
-    /* margin-left: 2em; */
     margin-right: 2em;
 }
 .form-content{
@@ -397,7 +384,6 @@ label{
 }
 .name,.phoneAndEmail{
     border-style: none;
-    /* outline: black; */
     background: #f2f2f2;
     height: 3em;
 }
@@ -421,5 +407,110 @@ button:hover{
 .device{
     width: 8em;
     height: 8em;
-    /* background: red; */
+}
+@media screen and (max-width: 600px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .second-nav-bar{
+        position: sticky;
+        z-index: 3;
+    }
+    .phone-and-email, .form, .content1,.content2,.content4,.content3,.content5,.form-left,.img-row{
+        flex-direction: column;
+    }
+    .container1, .container2, .container3,.container4, .container5{
+        height: 250vh;
+    }
+    .container2{
+        height: 100vh;
+    }
+    .container3{
+        height: 150vh;
+    }
+    .container4{
+        height: 350vh;
+    }
+    .container6{
+        height: 400vh;
+    }
+    .right1,.left1,.right3,.left3{
+        background: white;
+        width: 125%;
+        height: 50%;
+        background: white;
+        padding-bottom: 6em;
+    }
+    .underline{
+        width: 15em;
+    }
+    p{
+        font-size: 1em;
+        width: 80%;
+    }
+    .right1-heading,.right1-heading2,.right-short-text{
+        margin-right: 4em;
+    }
+    .form-left{
+        width: 70%;
+        
+    }
+    .form-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4em;
+        width: 70%;
+        height: 60%;
+        margin-bottom: -7em;
+    }
+    .form{
+        width: 60%;
+        height: 120%;
+        margin-bottom: -12em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-text{
+        width: 20ch;
+        margin-right: 2em;
+    }
+    .footer1{
+        height: 40em;
+    }
+    .phoneAndEmail{
+        width: 100%;
+    }
+    .phoneAndEmail, .name{
+        width: 10em;
+        height: 4em;
+    }
+    .form-heading{
+        font-size: 2.05em;
+        width: 12ch;
+    }
+    .icon{
+        margin-left: 1.75em;
+    }
+    .second-logo{
+        width: 8em;
+        height: 3.4em;
+    }
+    .dog-advise{
+        margin-right: 2em;
+    }
+    .left3{
+        top: -23em;
+        /* z-index: 3; */
+      
+    }
+    .right3{
+        top: 43em;
+        width: 114.2%;
+        padding: -2em 0 -8em 0;
+    }
+   
 }
