@@ -10,7 +10,7 @@ body{
     display: flex;
     width: 60vw;
     height: 90vh;
-    background: #f2f2f2;
+    background: #e6e4e4;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
@@ -23,7 +23,7 @@ body{
 .content-left{
     display: flex;
     flex-direction: column;
-    background: #fffbfb;
+    background: white;
     /* justify-content: center; */
     align-items: center;
     border-top-left-radius: 20px;
@@ -90,4 +90,20 @@ body{
     padding: 2px 0 0 0;
     /* right: 2px; */
     background: #fff;
+}
+/* SIGN UP STYLES */
+button{
+    background: blue;
+    color: white;
+    width: 250px;
+    height: 3em;
+    border-radius: 3px;
+    outline: rgb(110, 110, 173);
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0em;
 }
