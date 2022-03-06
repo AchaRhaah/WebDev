@@ -337,3 +337,23 @@ h3{
 .red-btn:hover{
     color: #fff;
 }
+/* --------BLOG CONTENT----------- */
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h2{
+    color: #222;
+    padding-top: 20px;
+}
+.blog-left p{
+    color: #999;
+    padding: 0px;
+}
