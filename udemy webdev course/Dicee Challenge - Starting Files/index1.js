@@ -9,8 +9,8 @@ const links = [
 let img1 = document.querySelector(".img1");
 let img2 = document.querySelector(".img2");
 let refreshMe = document.querySelector("h1")
-let randomNumber1 = Math.floor(Math.random() * 6);
-let randomNumber2 = Math.floor(Math.random() * 6);
+let randomNumber1 = Math.floor(Math.random() * 6) + 1;
+let randomNumber2 = Math.floor(Math.random() * 6) + 1;
 const link1 = links[randomNumber1-1];
 const link2 = links[randomNumber2-1];
 
