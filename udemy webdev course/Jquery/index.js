@@ -1,9 +1,9 @@
 // $("h1").css("color", "red");
 
 // click events
-$("button").click(function(){
-    $("h1").css("color", "orange");
-});
+// $("button").click(function(){
+//     $("h1").css("color", "orange");
+// });
 // keypress events
 $("input").keypress(function(event){
     // alert(event.key);
@@ -30,7 +30,15 @@ $("h1").after("<button>created</button>")
 
 // website animations with JQuery
 $("button").click(function(){
-    $("h1").hide()
-});
+    //$("h1").hide();
+    // $("h1").toggle();
+    // $("h1").fadeIn();
+    // $("h1").fadeOut();
+    // $("h1").fadeToggle();
+    // $("h1").slideToggle(); //good for dropdowns
 
+    // **To customise animations, use "animate() function"
+    $("h1").animate({opacity: 0.5});
+});
+  
 
