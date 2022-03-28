@@ -8,15 +8,23 @@
 </head>
 <body>
     <form action="hihihi.php" method="post">
-        <input type="text" placeholder="grade">
+        <input type="text" name="grade" placeholder="grade">
         <input type="submit">
     </form>
     <?php
-        $grade = $_POST["grade"];
-        switch($grade){
+        $grades = $_POST["grade"];
+        switch($grades){
             case "A":
-                echo "you did great";
+                echo "you did amazing";
                 break;
+            case "B":
+                echo "you did well";
+                break;
+            case "C":
+                echo "you did good";
+                break;
+            default:
+                echo "invalid grade";
         }
     ?>
 </body>
