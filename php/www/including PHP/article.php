@@ -8,12 +8,9 @@
 </head>
 <body>
     <?php
-    $index = 1;
-        do{
-            echo "$index <br>";
-            $index++;
-        }
-        while($index <= 5);
+        $title = "My first Post";
+        $author = "Acha";
+        include "articleheader.php"
     ?>
 </body>
 </html>

@@ -8,12 +8,8 @@
 </head>
 <body>
     <?php
-    $index = 1;
-        do{
-            echo "$index <br>";
-            $index++;
-        }
-        while($index <= 5);
+        include "header.html";
+        include "footer.html";
     ?>
 </body>
 </html>
