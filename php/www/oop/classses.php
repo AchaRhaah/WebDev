@@ -11,21 +11,19 @@
         class Book {
             var $author;
             var $pages;
+            var $title;    
 
-            function __construct(){
-                echo "New book created!";
+            function __construct($atitle, $aAuthor, $aPages){
+                // echo "New book created!";
+                $this->title = $atitle;
+                $this->author = $aAuthor;
+                $this->pages = $aPages;
             }
         }
-        $book1 = new Book();
-        $book1->title = "HArry Potter";
-        $book1->author = "JK Rowling";
-        $book1->pages = 400;
-
-        $book2 = new Book();
-        $book2->title = "Rediscovering the kingdom";
-        $book2->author = "Myles Munroe";
-        $book2->pages = 700;
-
+        $book1 = new Book("Harry Potter", "JK Rolings", 400);
+        
+        $book2 = new Book("Think and Grow rich", "Napoleon Hills", 500);
+        
         echo $book1->author;
         echo "<br>";
         echo $book2->author;
