@@ -32,7 +32,6 @@ function computerPlay(){
     if(clickAuthentication(compIndexPlay, computerPlayArr)){
         ID.style.background = "red";
     }
-    // available.splice(index, 1);
 }
 function clickAuthentication(value, arrToBePushed){
     if(available.includes(value)){
