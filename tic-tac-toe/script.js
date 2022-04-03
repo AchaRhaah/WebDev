@@ -4,11 +4,12 @@ var numArray = [];
 var computerPlayArr = [];
 btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
-        computerPlay();
         const num = parseInt(e.currentTarget.id);
         if(clickAuthentication(num, numArray)){
-        btn.textContent = "X";
+            btn.textContent = "X";
+            computerPlay();
         }
+        alert("clicked "+num);
     });
 
 });
@@ -28,15 +29,18 @@ function computerPlay(){
     var compIndex = compIndexPlay.toString();
     var ID = document.getElementById(compIndex);
     var index = available.indexOf(compIndexPlay);
-    clickAuthentication()
-    available.splice(index, 1);
-    ID.style.background = "red";
+    if(clickAuthentication(compIndexPlay, computerPlayArr)){
+        ID.style.background = "red";
+    }
+    // available.splice(index, 1);
 }
 function clickAuthentication(value, arrToBePushed){
     if(available.includes(value)){
         var index = available.indexOf(value);
         available.splice(index, 1);
+        console.log(available);
         arrToBePushed.push(value);
+        console.log("good");
         return true;
     }
     return false;
