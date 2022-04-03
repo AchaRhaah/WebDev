@@ -4,11 +4,14 @@ var numArray = [];
 var computerPlayArr = [];
 btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
-        computerPlay();
         const num = parseInt(e.currentTarget.id);
         if(clickAuthentication(num, numArray)){
-        btn.textContent = "X";
-        }
+            btn.textContent = "X";
+            computerPlay();
+
+        };
+       console.log(available);
+       checkWins(numArray);
     });
 
 });
@@ -24,19 +27,22 @@ function checkWins(arr){
 function computerPlay(){
     let max = Math.max.apply(null, available);
     let min = Math.min.apply(null, available);
-    var compIndexPlay = (Math.floor(Math.random() * (max - min)) + min);
-    var compIndex = compIndexPlay.toString();
+    var compIndexPlay = Math.floor(Math.random() * (max - min) + min);
+    var compIndex = compIndexPlay.toString()
     var ID = document.getElementById(compIndex);
-    var index = available.indexOf(compIndexPlay);
-    clickAuthentication()
-    available.splice(index, 1);
-    ID.style.background = "red";
+    if(clickAuthentication(compIndexPlay, computerPlayArr)){
+        ID.textContent = "O";
+    };
 }
+
+// clickAuthentication checks if the number assigned to the square through its ID is availalbe in the available array, 
+// and returns true if it is ans false if it is not
 function clickAuthentication(value, arrToBePushed){
     if(available.includes(value)){
         var index = available.indexOf(value);
         available.splice(index, 1);
         arrToBePushed.push(value);
+        computerPlay();
         return true;
     }
     return false;
