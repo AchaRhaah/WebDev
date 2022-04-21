@@ -7,13 +7,15 @@ var computerPlayArr = [];
 btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
         const num = parseInt(e.currentTarget.id);
+        console.log(available, num,"me");
+
         if(clickAuthentication(num, numArray)){
             btn.textContent = "X";
             if(checkWins(numArray)){
                 title.textContent = "You WIN!!!!";
             }
             setTimeout( function() { computerPlay(); }, 1000);
-            console.log(available+"me");
+            // console.log(available+"me");
         }
     });
 
@@ -30,12 +32,12 @@ function checkWins(arr){
     let eight = arr.indexOf(8);
     let nine = arr.indexOf(9);
     if(arr.includes(1) && arr.includes(2) && arr.includes(3)){
-        if(one > two > three || three > two > one){
+        if(one > two > three || three > two > one || three > two > one || one > two > three){
             return true;
         }
     }
     if(arr.includes(4) && arr.includes(5) && arr.includes(6)){
-        if(four > five > six || six > five > four){
+        if(four > five > six || six > five > four ){
             return true;
         }
     }
@@ -74,26 +76,34 @@ function checkWins(arr){
 function computerPlay(){
     let max = Math.max.apply(null, available);
     let min = Math.min.apply(null, available);
-    var compIndexPlay = Math.floor(Math.random() * (max - min) + min); 
-    var ID = compIndexPlay.toString();
-    let Id = document.getElementById(ID);
-    if(clickAuthentication(compIndexPlay, computerPlayArr)){
+    var compIndexPlay = Math.floor(Math.random() * (max - min) + min);
+    if(available.includes(compIndexPlay)){
+        console.log(available, compIndexPlay,"computer");
+        var ID = compIndexPlay.toString();
+        let Id = document.getElementById(ID);
+        if(clickAuthentication(compIndexPlay, computerPlayArr)){
         Id.textContent = "O";
         if(checkWins(computerPlayArr)){
             title.textContent = "Computer wins";
         };
+        }
     }
+    else{
+        computerPlay()
+    } 
+    
 }
+
 
 function clickAuthentication(value, arrToBePushed){
     if(available.includes(value)){
 
         var index = available.indexOf(value);
         available.splice(index, 1);
-        console.log(available+"computer");
 
         arrToBePushed.push(value);
         return true;
     }
+    console.log("***NO", value, available);
     return false;
 }
