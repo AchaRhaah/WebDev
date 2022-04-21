@@ -7,7 +7,6 @@ var computerPlayArr = [];
 btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
         const num = parseInt(e.currentTarget.id);
-        console.log(available, num,"me");
 
         if(clickAuthentication(num, numArray)){
             btn.textContent = "X";
@@ -15,7 +14,6 @@ btns.forEach(function(btn){
                 title.textContent = "You WIN!!!!";
             }
             setTimeout( function() { computerPlay(); }, 1000);
-            // console.log(available+"me");
         }
     });
 
@@ -32,42 +30,61 @@ function checkWins(arr){
     let eight = arr.indexOf(8);
     let nine = arr.indexOf(9);
     if(arr.includes(1) && arr.includes(2) && arr.includes(3)){
-        if(one > two > three || three > two > one || three > two > one || one > two > three){
+        if(one > two > three || three > two > one || two > three > one || one > three > two || two > one > three || three > one > two){
+            alert("yes");
+
             return true;
         }
     }
     if(arr.includes(4) && arr.includes(5) && arr.includes(6)){
-        if(four > five > six || six > five > four ){
+        if(four > five > six || four > five > six || five > four > six || six > four > five || five > six > four || four > six > five){
+            alert("yes");
             return true;
         }
     }
+
     if(arr.includes(7) && arr.includes(8) && arr.includes(9)){
-        if(seven > eight > nine || nine > eight > seven){
+        if(seven > eight > six || seven > eight > six || eight > seven > six || six > seven > eight || eight > six > seven || seven > six > eight){
+
+            alert("yes");
+
             return true;
         }
     }
     if(arr.includes(1) && arr.includes(4) && arr.includes(7)){
-        if(one > four > seven || seven > four > one){
+        if(one > seven > seven || one > seven > seven || seven > one > seven || seven > one > seven || seven > seven > one || one > seven > seven){
+
+            alert("yes");
+
             return true;
         }
     }
     if(arr.includes(2) && arr.includes(5) && arr.includes(8)){
-        if(two > five > eight || eight > five > two){
+        if(two > five > eight || two > eight > eight || eight > two > eight || eight > two > five || seven > seven > two || two > seven > seven){
+            alert("yes");
+
             return true;
         }
     }
     if(arr.includes(3) && arr.includes(6) && arr.includes(9)){
+        if(three > five > eight || three > eight > eight || eight > three > eight || eight > three > five || seven > seven > three || three > seven > seven){
+
         if(three > six > nine || nine > six > three){
             return true;
         }
     }
     if(arr.includes(1) && arr.includes(5) && arr.includes(9)){
-        if(one > five > nine || nine > five > one){
+        if(one > five > nine || nine > five > one || five > nine > one || five > one > nine || one > nine > five){
+            alert("Oui");
             return true;
         }
     }
     if(arr.includes(3) && arr.includes(5) && arr.includes(7)){
-        if(three > five > seven || seven > five > three){
+        alert("yesgh");
+        console.log(arr);
+        if(three > five > seven || three > seven > seven || seven > three > seven || seven > three > five || seven > seven > three || three > seven > seven){
+            alert("yesg");
+
             return true;
         }
     }
@@ -78,7 +95,6 @@ function computerPlay(){
     let min = Math.min.apply(null, available);
     var compIndexPlay = Math.floor(Math.random() * (max - min) + min);
     if(available.includes(compIndexPlay)){
-        console.log(available, compIndexPlay,"computer");
         var ID = compIndexPlay.toString();
         let Id = document.getElementById(ID);
         if(clickAuthentication(compIndexPlay, computerPlayArr)){
@@ -87,10 +103,10 @@ function computerPlay(){
             title.textContent = "Computer wins";
         };
         }
-    }
+    } 
     else{
         computerPlay()
-    } 
+    }
     
 }
 
@@ -100,7 +116,6 @@ function clickAuthentication(value, arrToBePushed){
 
         var index = available.indexOf(value);
         available.splice(index, 1);
-
         arrToBePushed.push(value);
         return true;
     }
