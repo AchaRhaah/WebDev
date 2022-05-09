@@ -4,6 +4,7 @@ var title = document.querySelector(".title");
 var available = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var numArray = [];
 var computerPlayArr = [];
+
 btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
         const num = parseInt(e.currentTarget.id);
@@ -31,59 +32,47 @@ function checkWins(arr){
     let nine = arr.indexOf(9);
     if(arr.includes(1) && arr.includes(2) && arr.includes(3)){
         if(one > two > three || three > two > one || two > three > one || one > three > two || two > one > three || three > one > two){
-            alert("yes");
 
             return true;
         }
     }
     if(arr.includes(4) && arr.includes(5) && arr.includes(6)){
-        if(four > five > six || four > five > six || five > four > six || six > four > five || five > six > four || four > six > five){
-            alert("yes");
+        if(four > five > six || six > five > four || five > six > four || four > six > five || five > four > six || six > four > five){
             return true;
         }
     }
 
     if(arr.includes(7) && arr.includes(8) && arr.includes(9)){
-        if(seven > eight > six || seven > eight > six || eight > seven > six || six > seven > eight || eight > six > seven || seven > six > eight){
-
-            alert("yes");
-
+        if(seven > eight > nine || nine > eight > seven || eight > nine > seven || seven > nine > eight || eight > seven > nine || nine > seven > eight){
             return true;
         }
     }
     if(arr.includes(1) && arr.includes(4) && arr.includes(7)){
-        if(one > seven > seven || one > seven > seven || seven > one > seven || seven > one > seven || seven > seven > one || one > seven > seven){
-
-            alert("yes");
+        if(one > four > seven || seven > four > one || four > seven > one || one > seven > four || four > one > seven || seven > one > four){
 
             return true;
         }
     }
     if(arr.includes(2) && arr.includes(5) && arr.includes(8)){
-        if(two > five > eight || two > eight > eight || eight > two > eight || eight > two > five || seven > seven > two || two > seven > seven){
-            alert("yes");
+        if(five > two > eight || eight > two > five || two > eight > five || five > eight > two || two > five > eight || eight > five > two){
 
             return true;
         }
     }
     if(arr.includes(3) && arr.includes(6) && arr.includes(9)){
-        if(three > five > eight || three > eight > eight || eight > three > eight || eight > three > five || seven > seven > three || three > seven > seven){
+        if(nine > six > three || three > six > nine || six > three > nine || nine > three > six || six > nine > three || three > nine > six){
 
-        if(three > six > nine || nine > six > three){
             return true;
         }
     }
     if(arr.includes(1) && arr.includes(5) && arr.includes(9)){
-        if(one > five > nine || nine > five > one || five > nine > one || five > one > nine || one > nine > five){
-            alert("Oui");
+        if(one > five > nine || nine > five > one || five > nine > one || one > nine > five || five > one > nine || nine > one > five){
             return true;
         }
     }
     if(arr.includes(3) && arr.includes(5) && arr.includes(7)){
-        alert("yesgh");
         console.log(arr);
-        if(three > five > seven || three > seven > seven || seven > three > seven || seven > three > five || seven > seven > three || three > seven > seven){
-            alert("yesg");
+        if(five > seven > three || three > seven > five || seven > three > five || five > three > seven || seven > five > three || three > five > seven){
 
             return true;
         }
