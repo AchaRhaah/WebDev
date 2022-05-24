@@ -1,0 +1,337 @@
+*,*::after, *::before{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+}
+/* *****************NAV***************** */
+nav{
+    display: flex;
+    gap: 1.5em;
+    width: 100%;
+    height: 6em;
+    align-items: center;
+    background: #f8f7ff;
+    justify-content: space-between;
+    position: sticky;
+}
+.links{
+    display: flex;
+    gap: 1em;
+}
+.cred{
+    width: 8em;
+    height: 3em;
+    display: flex;
+    background: #3571F0;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em;
+    margin-right: 2em;
+}
+.cred .log{
+    color: #f8f7ff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    border-right: 2px solid #f8f7ff;
+    margin: 0.5em
+}
+.cred .reg{
+    color: #f8f7ff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #292929;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.logo{
+    width: 8em;
+    height: 4em;
+    left: 2em;
+    background-image: url(./imagesE/icons/logo.png);
+    background-size: cover;
+}
+/* ********************Hero************ */
+.hero{
+    width: 100vw;
+    height: 90vh;
+    background: #e9ecef;
+    display: flex;
+    transition: all 0.5s ease;
+}
+.text{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    margin-top: 8em;
+    margin-left: 8em;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.text h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 5em;
+}
+.text p{
+    margin-top: 2em;
+    width: 60ch;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+.search{
+    width: 24em;
+    height: 4em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    background: #f8f7ff;
+}
+.search-btn{
+    width: 40%;
+    height: 3.4em;
+    border-radius: 20px;
+    background:  #3571F0;
+    display: flex;
+    font-size: 1em;
+    font-weight: 1000;
+    color: #f8f7ff;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+.search input{
+    width: 50%;
+    border: none;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 10px;
+    background: #f2eded;
+    outline: none;
+}
+.img{
+    width: 45%;
+    height: 100%;
+    margin-right: 4em;
+    background-image: url(./imagesE/images/pexels-julia-m-cameron-4143798-removebg.png);
+    background-size: cover;
+    background-position: 50% 60%;
+}
+/* ****************SECTION 2***************** */
+.values{
+    display: flex;
+    gap: 13em;
+    width: 100%;
+    /* justify-content: space-between; */
+    padding: 2em;
+    margin: 2em;
+    margin-left: 2em
+}
+.val{
+    display: flex;
+    width: 16em;
+    padding: 0 0.4em 0 0.4em;
+    height: 4em;
+    border-radius: 30px;
+    background: #e9ecef;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in;
+}
+.icon1, .icon2, .icon3, .icon4{
+    width: 3.5em;
+    height: 3.5em;
+    background-size: cover;
+}
+.icon1{
+    background-image: url(./imagesE/icons/one.png);
+}
+.icon2{
+    background-image: url(./imagesE/icons/two.png);
+}
+.icon3{
+    background-image: url(./imagesE/icons/three.png);
+}
+.icon3{
+    background-image: url(./imagesE/icons/four.png);
+}
+/* *******************Section3********************** */
+.stats{
+    display: flex;
+    gap: 12em;
+    margin: 4em;
+    transition: all 0.5s ease;
+}
+.cat{
+    display: flex;
+    gap: 2em;
+    margin-left: 19em;
+}
+.sort-search{
+    margin-left: 20em;
+}
+.card{
+    width: 120em;
+    height: 25em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+    /* magin-right: 1em; */
+    background: #dee2ff;
+    border-radius: 2em;
+}
+.card h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+}
+.card p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    width: 15em;
+}
+.image1, .image2, .image3, .image4{
+    width: 4.5em;
+    height: 4.5em;
+    background-size: cover;
+}
+.image1{
+    background-image: url("./imagesE/icons/one1.png");
+}
+.image2{
+    width: 5em;
+    height: 5em;
+    background-image: url("./imagesE/icons/two.png");
+}
+.image3{
+    background-image: url("./imagesE/icons/three3.png");
+}
+.image4{
+    background-image: url("./imagesE/icons/five.png");
+}
+.why, .courses h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 5em;
+    margin-left: 7em;
+}
+.reason, .courses p{
+    width: 120ch;
+    margin-left: 35em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    /* width: 15em; */
+}
+/* ********************Courses******************* */
+.courses p{
+    width: 4em;
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 1.2em; */
+   
+}
+.courses{
+    background: #e9ecef;
+}
+.sort-by{
+    width: 100%;
+    align-items: left;
+    display: flex;
+    gap: 5em;
+    margin-left: 5em;
+}
+.sort{
+    width: 8em;
+    height: 4em;
+    background: white;
+    border-radius: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #292929;
+}
+.sort-search{
+    width: 24em;
+    height: 6em;
+    display: flex;
+    gap: 0;
+}
+.sort-search input{
+    width: 16em;
+    height: 4em;
+    border-radius: 3em;
+    margin-right: 3em;
+    outline: none;
+    border: none;
+}
+.s-btn{
+    width: 6em;
+    border-radius: 3em;
+}
+.course{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    align-items: center;
+    justify-content: center;
+}
+.course-card{
+    width: 19em;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+    padding: 1em;
+
+    /* align-items: left; */
+    /* padding: 0.5em; */
+    /* magin-right: 1em; */
+    /* background: red; */
+    border-radius: 2em;
+}
+.course-card label{
+    margin-left: 1.5em;
+}
+.course-card h2{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-left: 1.25em;
+}
+.course1, .course2, .course1{
+    width: 100%;
+    height: 50%;
+    background-image: url(./imagesE/images/pexels-andrea-piacquadio-927022.jpg);
+    background-size: cover;
+    padding-top: 1em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+.row1, .row2{
+    display: flex;
+    padding: 2em;
+    gap: 5em;
+}

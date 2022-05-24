@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+body{
+    background: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stats-preveiw-card{
+    width: 70rem;
+    height: 40rem;
+    margin-top: 6em;
+    background: hsl(244, 38%, 16%);
+    display: flex;
+}
+.right, .left{
+    width: 50%;
+}
+.left{
+    background-image: url(./images/image-header-mobile.jpg);
+    /* background-position: center; */
+    background-size: cover;
+}

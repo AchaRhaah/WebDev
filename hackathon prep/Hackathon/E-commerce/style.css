@@ -1,0 +1,303 @@
+*,*:before, *:after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 1em;
+}
+::-webkit-scrollbar-track{
+    background: rgb(83, 62, 62);
+    border-radius: 100vw;
+    margin-block: .5em;
+    margin-top: 4em;
+}
+::-webkit-scrollbar-thumb{
+    background: #c9b3b0;
+    border-radius: 100vw;
+}
+body{
+    background: #F2E6E4;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 8em;
+}
+/* ******************HERO***************** */
+.hero{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+}
+.right_image{
+    background-image: url(./images/hero.jpg);
+    width: 40%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.left{
+    width: 60%;
+    background: #1A0F0F;
+    position: relative;
+}
+.left h1{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFAF7;
+    font-family: 'Cinzel', serif;
+    font-size: 8em;
+    font-weight: 200;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    height: 2em;
+    width: 100%;
+    float: right;
+    display: flex;
+    position: absolute;
+    gap: 2em;
+    align-items: center;
+    float: right;
+}
+nav a{
+    font-family: 'Cinzel', serif;
+    font-family: 200;
+    font-size: 1.5em;
+    align-items: left;
+    text-decoration: none;
+    color: #FFFAF7;
+    /* float: left; */
+    /* margin-left: 12em; */
+}
+nav .links{
+    float: left;
+}
+nav a:hover{
+    color:#8b8785;
+}
+h2{
+    font-family: 'Cinzel', serif;
+    font-size: 4em;
+    margin-left: 2em;
+}
+h2::after{
+    content: '';
+    position: absolute;
+    /* width: 100%; */
+    height: 3px;
+    left: 0;
+    bottom: 0%; 
+    background: #1A0F0F;
+}
+.layer{
+    background: transparent;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    display: hidden;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.layer:hover{
+    display: block;
+    background: rgba(131, 86, 86, 0.7);
+}
+button{
+    width: 12em;
+    height: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+    font-size: 1em;
+    font-weight: bold;
+    align-items: center;
+    /* display: none; */
+}
+.layer:hover button{
+    border: 4px solid #1A0F0F;
+    color: #1A0F0F;
+    border-radius: 4em;
+    font-family: 'Quicksand', sans-serif;
+    background: transparent;
+    display: flex;
+}
+/* button{
+    width: 8em;
+    height: 4em;
+    border: 4px solid #1A0F0F;
+    border-radius: 4em;
+    /* background: transparent; 
+    font-family: 'Quicksand', sans-serif;
+    color: red;
+    display: none;
+}
+button:hover{
+    color: #1A0F0F;
+} */
+
+/* **********************SHOE SECTION *********************** */
+.shoes_container, .bags_container, .hats_container{
+    padding: 3em;
+    display: flex;
+    gap: 7em;
+    max-height: 47em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.itemcard{
+    min-width: 28em;
+    height: 42em;
+    margin-bottom: 1em;
+    position: relative;
+    display: flex;
+    border-radius: 40px;
+    flex-direction: column;
+    box-shadow: 8px 9px 25px 3px rgba(168,149,149,1);
+-webkit-box-shadow: 8px 9px 25px 3px rgba(168,149,149,1);
+-moz-box-shadow: 8px 9px 25px 3px rgba(168,149,149,1);
+}
+.shoe1{
+    background-image: url(./images/shoes_sneakers1.jpg);
+    background-position: 50% 50%;
+}
+.shoe2{
+    background-image: url(./images/shoes_sneakers2.jpg);
+    background-position: 44% 44%;
+}
+.shoe3{
+    background-image: url(./images/shoes_sneakers3.jpg);
+}
+.shoe4{
+    background-image: url(./images/shoes_sneakers4.jpg);
+}
+.shoe5{
+    background-image: url(./images/shoes_sneakers5.jpg);
+}
+.shoe1, .shoe2, .shoe3, .shoe4, .shoe5{
+    min-width: 28em;
+    height: 80%;
+    background-size: cover;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+.desc{
+    margin-top: 2em;
+    height: 15%;
+    margin-left: 2em;
+}
+.desc h4{
+    font-size: 1.5em;
+    color:#1A0F0F;
+    font-family: 'Quicksand', sans-serif;
+}
+/* ****************bags****************** */
+.bag1{
+    background-image: url(./images/bag1.jpg);
+    background-position: 50% 50%;
+}
+.bag2{
+    background-image: url(./images/bag2.jpg);
+}
+.bag3{
+    background-image: url(./images/bag3.jpg);
+}
+.bag4{
+    background-image: url(./images/bag4.jpg);
+}
+.bag5{
+    background-image: url(./images/bag5.jpg);
+}
+.bag1, .bag2, .bag3, .bag4, .bag5{
+    min-width: 28em;
+    height: 80%;
+    background-size: cover;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+/* ******************HATS******************** */
+.hat1{
+    background-image: url(./images/hat4.jpg);
+    background-position: 40% 50%;
+}
+.hat2{
+    background-image: url(./images/hat1.jpg);
+    background-position: 70% 70%;
+}
+.hat3{
+    background-image: url(./images/hat2.jpg);
+}
+.hat4{
+    background-image: url(./images/hat3.jpg);
+}
+.hat5{
+    background-image: url(./images/hat4.jpg);
+    background-position: 40% 50%;
+}
+.hat1, .hat2, .hat3, .hat4, .hat5{
+    min-width: 28em;
+    height: 80%;
+    background-size: cover;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+/* ******************FOOTER*********************B88477 */
+.footer{
+    width: 100vw;
+    height: 70vh;
+    background: #1A0F0F;
+    display: flex;
+    flex-direction: column;
+}
+.fa-brands, .fab, .fa-solid{
+    color: #FFFAF7;
+    font-size: 3em;
+}
+.layer:hover .fa-solid{
+    color: #FFFAF7;
+    font-size: 3em;
+}
+.fa-solid{
+    color: transparent;
+    font-size: 3em;
+    transition: 0.5s ease-in-out;
+}
+
+.icons{
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+.info-sec{
+    display: flex;
+    align-items: center;
+    gap: 8em;
+    justify-content: center;
+}
+li{
+    color: #FFFAF7;
+    font-size: 1.5em; 
+    list-style: none;
+}
