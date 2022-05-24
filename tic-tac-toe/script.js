@@ -9,9 +9,9 @@ btns.forEach(function(btn){
     btn.addEventListener('click', function(e){
         const num = parseInt(e.currentTarget.id);
 
-        if(clickAuthentication(num, numArray)){
+        if(clickAuthentication(num, numArray )){
             btn.textContent = "X";
-            if(checkWins(numArray)){
+            if(checkWins( numArray )){
                 title.textContent = "You WIN!!!!";
             }
             setTimeout( function() { computerPlay(); }, 1000);
