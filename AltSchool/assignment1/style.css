@@ -1,0 +1,79 @@
+*, *::before, *::after{
+    left: 0;
+    right: 0;
+    top: 0;
+    Bottom: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    align-items: left;
+    height: 3em;
+    width: 100%;
+    padding: 2em;
+    top: 0;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    background: #1c1c1c;
+}
+nav ul{
+    display: flex;
+    gap: 1em;
+    text-decoration: none;
+}
+li{
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    transition: all .5s ease-in;
+}
+li:hover{
+    color: #da4167;
+}
+.herocontent{
+    display: flex;
+    background: #1c1c1c;
+    width: 100%;
+    height: 90vh;
+    padding: 2em;
+}
+.herocontent .right{
+    background: url("./image/hero1.jpeg"), rgba(0,0,0,1);
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    height: 100%;
+    border-radius: 2em;
+}
+.herocontent .left{
+    width: 55%;
+    height: 100%;
+}
+.herocontent .left .heroTitle{
+    color: white;
+    font-size: 4em;
+    margin-left: 3em;
+    margin-top: 3em;
+    width: 9ch;
+}
+.herocontent .left .heroTitle span{
+    color: #da4167;
+    margin-left: 5em;
+}
+.herocontent .left .heroTitle span::after{
+    content: "";
+    width: 10em;
+    height: 2em;
+    background: white;
+}
+.herocontent .left{
+    
+}
