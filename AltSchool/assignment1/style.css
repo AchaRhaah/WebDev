@@ -260,3 +260,23 @@ li:hover{
     justify-content: center;
     gap: 1em;
 }
+form{
+    width: 50%;
+    height: 20em;
+}
+.container{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    gap: 1em;
+}
+input{
+    width: 8em;
+    height: 1em;
+    border-style: none;
+    background: #1c1c1c;
+    border-bottom: solid 3px #da4167;
+}
+label{
+    color: white;
+}
