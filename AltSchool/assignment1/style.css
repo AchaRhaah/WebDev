@@ -268,15 +268,24 @@ form{
     width: 100%;
     height: 60%;
     display: flex;
-    gap: 1em;
+    gap: 8em;
 }
 input{
-    width: 8em;
+    width: 20em;
     height: 1em;
     border-style: none;
     background: #1c1c1c;
     border-bottom: solid 3px #da4167;
 }
+input[::placeholder]{
+    color: #fff;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
 label{
     color: white;
+    font-size: large;
+    margin-bottom: 1em;
 }
