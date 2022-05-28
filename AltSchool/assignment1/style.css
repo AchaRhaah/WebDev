@@ -272,7 +272,7 @@ form{
 }
 input{
     width: 20em;
-    height: 1em;
+    height: 3em;
     border-style: none;
     background: #1c1c1c;
     border-bottom: solid 3px #da4167;
@@ -287,5 +287,5 @@ input[::placeholder]{
 label{
     color: white;
     font-size: large;
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
 }
