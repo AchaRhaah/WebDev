@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+}
+section{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 90vh;
+}
+.row{
+    display: flex;
+}
