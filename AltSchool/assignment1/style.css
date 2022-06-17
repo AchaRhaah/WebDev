@@ -11,6 +11,7 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
+/* Nav Styles */
 nav{
     display: flex;
     align-items: left;
@@ -29,16 +30,19 @@ nav ul{
     gap: 1em;
     text-decoration: none;
 }
-li{
+a{
     font-weight: 600;
     text-decoration: none;
     list-style: none;
     color: white;
-    transition: all .3s ease-in;
+    transition: all .05s ease-in;
+    cursor: pointer;
 }
-li:hover{
+
+a:hover{
     color: #da4167;
 }
+/* Hero Styles */
 .herocontent{
     display: flex;
     background: #1c1c1c;
@@ -85,6 +89,42 @@ li:hover{
     height: 2em;
     background: white;
 }
+/* responsive  hero */
+
+@media screen and (max-width: 450px){ 
+    nav{
+          display: none;
+    }
+    .herocontent{
+        height: 60vh;
+    }
+    .herocontent .right{
+        width: 60%;
+        height: 95%;
+    }
+    .herocontent .right .right-image{
+        width: 85%;
+        height: 95%;
+    }
+    .herocontent .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 95%;
+        /* background: blue; */
+    }
+    .herocontent .left .heroTitle{
+        /* background: red; */
+        margin: 0;
+        font-size: 2em;
+        font-weight: 900;
+    }
+    .herocontent .left h5, .herocontent .left .heroTitle span{
+        margin: 0;
+    }
+  }
 /* GOALS */
 .goals{
     padding: 4em;
@@ -145,6 +185,30 @@ li:hover{
     color: #fff; 
     font-size: 1.3em;
     font-weight: 100;
+}
+@media screen and (max-width: 450px){
+    .goals{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* margin-left: 1em; */
+        padding: 0;
+    }
+    .goals-img{
+        display: none;
+    }
+    .goal .right{
+        background: red;
+    }
+    .rect{
+        width: 90%;
+        margin-left: 1.35em;
+    }
+    .desc{
+        padding: 0;
+        margin: 0;
+    }
 }
 /* EDUCATION AND WORK EXPERIENCE */
 .education{
