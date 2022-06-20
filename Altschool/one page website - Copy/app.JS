@@ -1,7 +1,7 @@
 function getHistory(){
     return document.getElementById("history-value").innerText;
 }
-alert(get)
+// alert(get)
 function printHistory(num){
     document.getElementById("history-value").innerText = num;
 }
@@ -26,7 +26,5 @@ function reverseNumberFormat(num){
 }
 var operators = document.querySelectorAll("operator");
 operators.forEach(function(operator){
-    operator.addEventListener('click', function(){
-       alert("the button clicked!");
-    });
+    console.log(operator)
 });

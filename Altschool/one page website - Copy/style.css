@@ -440,7 +440,7 @@ button:hover{
     width: 25ch;
     line-height: 1.5em;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     body{
         width: 100vw;
         overflow-x: hidden;
@@ -580,13 +580,15 @@ button:hover{
         height: 25%;
     }
     .right3{
-        top: 27.4em;
-        width: 109.6%;
-        height: 18%;
+        top: 25.4em;
+        width: 114.4%;
+        height: 23%;
         /* padding: -2em 0 -8em 0; */
     }
-   
 }
-@media screen and (max-width: 500px){
+@media screen and (min-width: 500px){
+    .right1{
+        background: red;
+    }
     
 }
