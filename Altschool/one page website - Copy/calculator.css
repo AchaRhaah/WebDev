@@ -75,15 +75,15 @@ button:nth-child(4){
 }
 button:nth-child(8){
     font-size: 20px;
-    background: #ffa500;
+    background: #008cff;
 }
 button:nth-child(12){
     font-size: 20px;
-    background: #f08080;
+    background: #e780f0;
 }
 button:nth-child(16){
     font-size: 20px;
-    background: #7d93e0;
+    background: #e0ad7d;
 }
 button:nth-child(20){
     font-size: 20px;
