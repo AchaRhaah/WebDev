@@ -32,6 +32,7 @@ body{
 .btn{
     width: 8em;
     height: 8em;
+    font-weight: bold;
     border: solid rgb(56, 55, 55);
     background-color: bisque;
 }
