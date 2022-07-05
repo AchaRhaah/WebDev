@@ -131,7 +131,7 @@ function checkWins(arr) {
       five > nine > one ||
       one > nine > five ||
       five > one > nine ||
-      nine > one > five
+      nine > one > four
     ) {
       return true;
     }
