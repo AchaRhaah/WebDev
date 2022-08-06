@@ -72,5 +72,15 @@ const unsubscribe = store.subscribe(() => console.log('*updated state', store.ge
 // store.dispatch(buyCake());
 store.dispatch(buyCake());
 store.dispatch(buyIcecream())
-unsubscribe()
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+store.dispatch(buyIcecream());
+
+// unsubscribe()
 // console.log("***initial state", store.getState());
