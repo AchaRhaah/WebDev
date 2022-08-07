@@ -1,7 +1,9 @@
 const redux = require("redux");
 const createStore = redux.createStore;
 const combineReducers = redux.combineReducers;
-
+const reduxLogger = require("redux-logger");
+const applyMiddleware = redux.applyMiddleware;
+const logger = reduxLogger.createLogger();
 // // action are javaScript object with a type property
 const BUY_CAKE = "BUY_CAKE";
 const BUY_ICECREAM = "BUY_ICECREAM";
@@ -64,13 +66,13 @@ const rootReducers = combineReducers({
   cake: cakeReducer,
   iceCreame: iceCreameReducer
 })
-const store = createStore(rootReducers);
+const store = createStore(rootReducers, applyMiddleware(logger));
 console.log("Initial state", store.getState())
-const unsubscribe = store.subscribe(() => console.log('*updated state', store.getState()))
+const unsubscribe = store.subscribe(() => {});
 // store.subscribe(() => console.log("updated state", store.getState()));
 // store.dispatch(buyCake());
 // store.dispatch(buyCake());
-store.dispatch(buyCake());
+// store.dispatch(buyCake());
 store.dispatch(buyIcecream())
 store.dispatch(buyIcecream());
 store.dispatch(buyIcecream());
