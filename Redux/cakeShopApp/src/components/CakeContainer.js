@@ -2,11 +2,11 @@ import React from "react";
 import { buyCake } from '../redux/index'
 import { connect } from 'react-redux'
 
-function CakeContainer() {
+function CakeContainer(props) {
   return (
     <div>
-      <h2>Number of cakes </h2>
-      <button>Buy cake</button>
+      <h2>Number of cakes - {props.numOfCakes} </h2>
+      <button onClick={props.buyCake}>Buy cake</button>
     </div>
   );
 }
