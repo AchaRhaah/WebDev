@@ -1,17 +1,10 @@
 import "./App.css";
-import React from 'react'
-import ComponentC from "./hooks/useContext/ComponentC";
-
-export const UserContext = React.createContext()
-export const ChannelContext = React.createContext()
+import React from "react";
+import { ComponentB } from "./React context and hooks/ComponentB";
 function App() {
   return (
     <div className="App">
-      <UserContext.Provider value={"Acha"}>
-        <ChannelContext.Provider value={"Rha'ah"}>
-          <ComponentC />
-        </ChannelContext.Provider>
-      </UserContext.Provider>
+      <ComponentB name={"Bethel Yeba"} />
     </div>
   );
 }
