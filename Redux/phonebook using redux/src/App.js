@@ -12,10 +12,9 @@ function App() {
       {/* We need 2 routes 1) /add 2) /edit/:id */}
       <ToastContainer />
       <Navbar />
-        <Routes>
-          <Route exact path="/" element={< ComponentA />} />
-            {" "}
-        </Routes>
+      <Routes>
+        <Route exact path="/" element={<ComponentA />} />
+      </Routes>
     </div>
   );
 }
