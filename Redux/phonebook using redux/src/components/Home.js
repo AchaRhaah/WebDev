@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-12 text-right px-5">
+        <div className="col-md-12 my-5 text-right px-5">
           <Link to="/add" className="btn btn-outline-dark">
             Add contact
           </Link>
