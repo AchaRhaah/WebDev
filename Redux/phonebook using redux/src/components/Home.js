@@ -1,7 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const contacts = useSelector(state => state)
   return (
     <div className="container">
       <div className="row">
@@ -10,9 +12,42 @@ function Home() {
             Add contact
           </Link>
         </div>
-        <div className="col-md-6 mx-auto"></div>
+        <div className="col-md-6 mx-auto">
+          <table className="table table-hover">
+            <thead className="text-white bg-dark text-center">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Number</th>
+                <th scope="col">Action</th>
+                <th scope="col">#</th>
+              </tr>
+            </thead>
+            <tbody>
+              {contacts.map((contacts, id) => (
+                <tr key={id}>
+                  <td>{id + 1}</td>
+                  <td>{contacts.name}</td>
+                  <td>{contacts.email}</td>
+                  <td>{contacts.number}</td>
+                  <td>
+                    <Link
+                      to={`/edit/${contacts.id}`}
+                      className="btn btn-small btn-primary mr-2"
+                    >
+                      Edit
+                    </Link>
+                    <button type="button" className="btn btn-small btn-danger">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-      <h1>Welcome to react Redux contact app</h1>
     </div>
   );
 }

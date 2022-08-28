@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-// import {useHistory} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function AddContact() {
@@ -10,7 +10,7 @@ function AddContact() {
 
   const contacts = useSelector((state) => state);
   const dispatch = useDispatch()
-  // const history = useHistory()
+  const history = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const checkEmail = contacts.find(
@@ -37,7 +37,7 @@ function AddContact() {
     };
     dispatch({ type: "ADD_CONTACT", payload: data })
     toast.success("Student added successfully")
-    console.log(data);
+    // history(-1)
   };
   console.log(contacts);
   return (
