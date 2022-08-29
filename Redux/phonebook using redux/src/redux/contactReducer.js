@@ -13,6 +13,7 @@ const contactReducer = (state = initialState, action) => {
         );
         state = updateState;
         return state;
+      case "DELETE_CONTACT"
       default:
         return state;
     }

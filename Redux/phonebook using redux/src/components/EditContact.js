@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 function EditContact() {
   const [name, setName] = useState("");
@@ -10,6 +10,7 @@ function EditContact() {
 
   const { id } = useParams();
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const contacts = useSelector((state) => state);
 
   const currentContact = contacts.find(
@@ -48,7 +49,7 @@ function EditContact() {
     };
     dispatch({ type: "UPDATE_CONTACT", payload: data });
     toast.success("Student updated successfully");
-    // history(-1)
+    navigate("/")
   };
 
   return (
@@ -58,7 +59,7 @@ function EditContact() {
           <h1 className="display-3 my-5 text-center">Edit Student {id}</h1>
           <div className="row">
             <div className="col-md-6 shadow p-5 mx-auto">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="form-group my-2">
                   <input
                     type="text"
