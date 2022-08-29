@@ -41,7 +41,7 @@ function EditContact() {
     }
 
     const data = {
-      id: contacts[contacts.length - 1].id + 1,
+      id: parseInt(id),
       name,
       email,
       number,
@@ -87,7 +87,7 @@ function EditContact() {
                   />
                 </div>
                 <div className="form-group my-2">
-                  <
+                  <input
                     type="submit"
                     value="Update Student"
                     className="btn btn-dark"

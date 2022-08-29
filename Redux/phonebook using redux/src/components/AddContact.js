@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import {useHistory} from "react-router-dom"
 import { toast } from "react-toastify";
 
 function AddContact() {
@@ -37,7 +38,8 @@ function AddContact() {
     };
     dispatch({ type: "ADD_CONTACT", payload: data })
     toast.success("Student added successfully")
-    // history(-1)
+    const navigate = useNavigate().
+    navigate("/")
   };
   console.log(contacts);
   return (
