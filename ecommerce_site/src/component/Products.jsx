@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
 export default function Products() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -20,23 +21,62 @@ export default function Products() {
     };
     getProduct();
   }, []);
-
+console.log(data)
   const Loading = () => {
-    return <>Loading...</>;
+    return (
+      <>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+      </>
+    );
   };
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((x) => x.category === cat)
+  }
   const ShowProduct = () => {
     return (
       <>
         <div className="buttons d-flex justify-content-center mb-5 pb-5">
-          <buttons className="btn btn-outline-dark me-2">All</buttons>
-          <buttons className="btn btn-outline-dark me-2">
+          <buttons
+            className="btn btn-outline-dark me-2"
+            onClick={() => setFilter(data)}
+          >
+            All
+          </buttons>
+          <buttons
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("men's clothing")}
+          >
             Men's Clothing
           </buttons>
-          <buttons className="btn btn-outline-dark me-2">
+          <buttons
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("women's clothing")}
+          >
             Women's Clothing
           </buttons>
-          <buttons className="btn btn-outline-dark me-2">Jewelery</buttons>
-          <buttons className="btn btn-outline-dark me-2">Electronic</buttons>
+          <buttons
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("jewelery")}
+          >
+            Jewelery
+          </buttons>
+          <buttons
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("electronic")}
+          >
+            Electronic
+          </buttons>
         </div>
         {filter.map((product) => {
           return (
@@ -72,6 +112,7 @@ export default function Products() {
         <div className="row">
           <div className="col-12 mb-5">
             <h1 className="display-6 fw-bolder text-center">Latest Products</h1>
+            <hr />
           </div>
         </div>
         <div className="row justify-content-center">
