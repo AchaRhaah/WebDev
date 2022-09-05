@@ -42,6 +42,7 @@ console.log(data)
   };
   const filterProduct = (cat) => {
     const updatedList = data.filter((x) => x.category === cat)
+    setFilter(updatedList)
   }
   const ShowProduct = () => {
     return (
@@ -73,9 +74,9 @@ console.log(data)
           </buttons>
           <buttons
             className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("electronic")}
+            onClick={() => filterProduct("electronics")}
           >
-            Electronic
+            Electronics
           </buttons>
         </div>
         {filter.map((product) => {
