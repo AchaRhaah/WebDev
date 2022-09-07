@@ -14,4 +14,4 @@ const handleCart = (state = cart, action) => {
   }
 };
 export default handleCart;
-// 38:47
+// 39:21
