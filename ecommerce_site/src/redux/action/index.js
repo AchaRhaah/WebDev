@@ -1,6 +1,6 @@
 export const addCart = (product) => {
   return {
-    type: "AddCART",
+    type: "ADDITEM",
     payload: product,
   };
 };
