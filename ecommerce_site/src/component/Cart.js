@@ -4,11 +4,12 @@ import { useSelector } from "react-redux";
 
 export default function Cart() {
   const state = useSelector((state) => state.handleCart);
-  const [prodQty, setProdQty] = useState(3);
+  const [prodQty, setProdQty] = useState(1);
 
-  const handleButton = (prod) => {
-    setProdQty((prevQty) => prevQty + 1);
-    console.log(prodQty);
+    const handleButton = (prod) => {
+      prod.qty ++
+      setProdQty(prod.qty);
+      console.log(prodQty)
   };
 
   return (
@@ -30,7 +31,7 @@ export default function Cart() {
                 {prodQty} &times; $ {product.price} = {product.price}
               </h3>
               <button
-                onClick={handleButton}
+                onClick={() => handleButton(product)}
                 className="btn btn-outline-dark me-4"
               >
                 <i className="fa fa-minus"></i>
