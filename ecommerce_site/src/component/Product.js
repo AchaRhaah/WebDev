@@ -27,7 +27,7 @@ function Product() {
   }, []);
   const Loading = () => {
     return (
-      <>
+      <>xxxx
         <div className="col-md-6">
           <Skeleton height={400} />
         </div>
@@ -45,7 +45,7 @@ function Product() {
   };
   const ShowProduct = () => {
     return (
-      <>
+      <div className="d-flex">
         <div className="col-md-6">
           <img
             src={product.image}
@@ -63,10 +63,17 @@ function Product() {
           </p>
           <h3 className="display-6 fw-bold my-4">$ {product.price}</h3>
           <p className="lead">{product.description}</p>
-          <button className="btn btn-outlune-dark px-4 py-2" onClick={() => addProduct(product)}>Add to cart</button>
-          <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2">Go to cart</NavLink>
+          <button
+            className="btn btn-outlune-dark px-4 py-2"
+            onClick={() => addProduct(product)}
+          >
+            Add to cart
+          </button>
+          <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2">
+            Go to cart
+          </NavLink>
         </div>
-      </>
+      </div>
     );
   };
   return (
