@@ -22,7 +22,6 @@ export default function Products() {
     };
     getProduct();
   }, []);
-console.log(data)
   const Loading = () => {
     return (
       <>
