@@ -4,12 +4,10 @@ import { useSelector } from "react-redux";
 
 export default function Cart() {
   const state = useSelector((state) => state.handleCart);
-  const [prodQty, setProdQty] = useState(1);
 
-    const handleButton = (prod) => {
-      prod.qty ++
-      setProdQty(prod.qty);
-      console.log(prodQty)
+  const HandleButton = (prod) => {
+    const [prodQty, setQty] = useState(prod.qty);
+    console.log(prodQty);
   };
 
   return (
@@ -28,10 +26,10 @@ export default function Cart() {
             <div className="col-md-6">
               <h6 className="display-5 fw-bold">{product.title}</h6>
               <h3 className="display-6 ">
-                {prodQty} &times; $ {product.price} = {product.price}
+                {product.qty} &times; $ {product.price} = {product.price}
               </h3>
               <button
-                onClick={() => handleButton(product)}
+                onClick={() => HandleButton(product)}
                 className="btn btn-outline-dark me-4"
               >
                 <i className="fa fa-minus"></i>
