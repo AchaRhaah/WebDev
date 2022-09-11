@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-// import handleCart from "../redux/reducers/handleCart";
+import handleCart from "../redux/reducers/handleCart";
 
 export default function Cart() {
   const state = useSelector((state) => state.handleCart);
