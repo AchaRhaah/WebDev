@@ -3,7 +3,7 @@ import cartItems from '../../cartItems'
 
 const initialState = {
   cartItems: cartItems,
-  amount: 5,
+  amount: 3,
   total: 0,
   isLoading: true,
 };
@@ -11,6 +11,7 @@ const initialState = {
 const cartSlice = createSlice({
   name: "cart",
   initialState,
+  
 });
 console.log(cartSlice);
 
