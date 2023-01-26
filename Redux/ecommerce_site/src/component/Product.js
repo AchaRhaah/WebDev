@@ -27,7 +27,7 @@ function Product() {
   }, []);
   const Loading = () => {
     return (
-      <>xxxx
+      <>
         <div className="col-md-6">
           <Skeleton height={400} />
         </div>
