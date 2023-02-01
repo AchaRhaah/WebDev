@@ -1,8 +1,6 @@
-const LOGIN = 'LOGIN'
-const LOGOUT = 'LOGOUT'
-const BOOK_APPT = 'BOOK_APPT'
-const APPT_HISTORY = "APPT_HISTORY"
-
-const bookAppt = () => {
-    
-}
+export const BookAppt = (apptInfo) => {
+  return (dispatch, getState) => {
+    // make async call to the db
+    dispatch({ type: "BOOK_APPT", apptInfo });
+  };
+};
