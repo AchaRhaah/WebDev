@@ -12,7 +12,6 @@ function Signin() {
   }
   const HandleSubmit = (e) => {
     e.preventDefault()
-    console.log(signinInfo)
 
   }
   return (

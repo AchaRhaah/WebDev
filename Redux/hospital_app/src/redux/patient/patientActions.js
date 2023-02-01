@@ -6,6 +6,7 @@ export const BookAppt = (apptInfo) => {
       ...apptInfo,
       patientFirstName: 'John',
       patientLastName: 'Doe',
+      isApproved: false,
       createdAt: new Date()
     }).then(() => {
       dispatch({ type: "BOOK_APPT", apptInfo });

@@ -34,7 +34,6 @@ function PatientDashboard() {
   const OnSubmit = (e) => {
     e.preventDefault();
     dispatch(BookAppt(apptInfo));
-    // console.log(apptInfo);
   };
 
   return (

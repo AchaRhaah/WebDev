@@ -1,7 +1,11 @@
 const initialState = {
-  consultation: "",
-  date: "",
-  time: "",
+  appointmemts: [
+    {
+      consultation: "",
+      date: "",
+      time: "",
+    },
+  ],
 };
 
 export const appointmentReducer = (state = initialState, action) => {
