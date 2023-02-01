@@ -1,16 +1,10 @@
 import firebase from "firebase/app";
-import "firebase/firestore";
 import "firebase/auth";
+import "firebase/firestore";
 
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAUY3WbF8y3NYuyLDHs9FfM3WFO3lXlYHk",
   authDomain: "hospital-application-d04bd.firebaseapp.com",
   projectId: "hospital-application-d04bd",
@@ -21,7 +15,5 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-firebase.firestore().settings({ timestampsInSnapShots: true });
-export default firebase;
+firebase.initializeApp(firebaseConfig);
+firebase.firestore().settings({timestampsInSnapshots: true})
